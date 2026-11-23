@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Мій курс</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Мій курс">
+  <meta name="theme-color" content="#eaf7ff">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEAElEQVR4nO3d3Y1jRRSF0Q2aVCAIoiITSAqCIBl46LEYmuk/t++9p3at9dqW+lj3c6lUsso//PTbH38HSvx49QDwSIKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKl+uHoA5/vr1lxf/9vPvf544yf0EzashP3/N9LBtOTb3npg/8/qzCXpj98Y5OWpBb+qzUU6NWtAbelSME6MW9GYmRvhIgt7IETFP+4AImiqC3sS0lfQogt7ALjEngq63U8yJoKvtFnMi6Fo7xpwIutKZMU/7spKgy+y6Mt8ImrtNW50TQVfZeatxI+gSYn4i6AJi/pegFyfm/xL0wsT8f4Je1O7Hcy8R9ILOjnmV1TkRNG9YKeZE0Muxb36doBci5rcJehFifh9BL0DM7yfo4cT8MYIezFnzxwl6KGfN9xE0NTEngh7Jvvl+S1543nDT/EvE/DlLBd100/z3iPnzltlytN00/5yYH2OJoBtvmv+WmB9nfNCtN83fTJ9vNaODbr5pPnHWfITRQfM4O8ScDA760avXtFXavvkYY4M+wpSoxXycrYJOro9azMfaLujkuqjFfLwtg07Oj1rM59g26OS8yK7e5uxk66CT42Nz1nyusUGf+WBaVtDdY04GB3221X9lVcxPRgd99kN6ZIBivsbooJM1oxbzdcYHnawVtZivtUTQyRpRi/l6ywSdPD3EqacfLSclq1sq6JtpUTtrnmPJoJN5UZ9FzK9bNuhkRtT2zbMsHXRybdRinmf5oJNrohbzTBVBJzO2H0cQ88fUBJ30Pfy293OGqqATEeyuLuikI+qG93CFyqCTtYNYefar1QadrBnGijNPUh10slYgK806VX3QyRqhrDDjCrYIOpkdzOTZVrNN0MnMcCbOtLKtgk4E1G67oJM5UU+Zo8mWQSfXx3T1/2+1bdDJdVGJ+ThbB52cH5eYj7V90Ml5kYn5eIL+6ujYxHwOQX/jqOjEfB5BPyO+tQn6YD4g5xL0dzwqQjGfT9Av+GyMYr6GoF9xb5Rivo6g3/DROMV8rS9XD7CCW6Sv3cch5BkE/QGinc+WgyqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiq/ANcoyhPivDICQAAAABJRU5ErkJggg==">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEAElEQVR4nO3d3Y1jRRSF0Q2aVCAIoiITSAqCIBl46LEYmuk/t++9p3at9dqW+lj3c6lUsso//PTbH38HSvx49QDwSIKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKl+uHoA5/vr1lxf/9vPvf544yf0EzashP3/N9LBtOTb3npg/8/qzCXpj98Y5OWpBb+qzUU6NWtAbelSME6MW9GYmRvhIgt7IETFP+4AImiqC3sS0lfQogt7ALjEngq63U8yJoKvtFnMi6Fo7xpwIutKZMU/7spKgy+y6Mt8ImrtNW50TQVfZeatxI+gSYn4i6AJi/pegFyfm/xL0wsT8f4Je1O7Hcy8R9ILOjnmV1TkRNG9YKeZE0Muxb36doBci5rcJehFifh9BL0DM7yfo4cT8MYIezFnzxwl6KGfN9xE0NTEngh7Jvvl+S1543nDT/EvE/DlLBd100/z3iPnzltlytN00/5yYH2OJoBtvmv+WmB9nfNCtN83fTJ9vNaODbr5pPnHWfITRQfM4O8ScDA760avXtFXavvkYY4M+wpSoxXycrYJOro9azMfaLujkuqjFfLwtg07Oj1rM59g26OS8yK7e5uxk66CT42Nz1nyusUGf+WBaVtDdY04GB3221X9lVcxPRgd99kN6ZIBivsbooJM1oxbzdcYHnawVtZivtUTQyRpRi/l6ywSdPD3EqacfLSclq1sq6JtpUTtrnmPJoJN5UZ9FzK9bNuhkRtT2zbMsHXRybdRinmf5oJNrohbzTBVBJzO2H0cQ88fUBJ30Pfy293OGqqATEeyuLuikI+qG93CFyqCTtYNYefar1QadrBnGijNPUh10slYgK806VX3QyRqhrDDjCrYIOpkdzOTZVrNN0MnMcCbOtLKtgk4E1G67oJM5UU+Zo8mWQSfXx3T1/2+1bdDJdVGJ+ThbB52cH5eYj7V90Ml5kYn5eIL+6ujYxHwOQX/jqOjEfB5BPyO+tQn6YD4g5xL0dzwqQjGfT9Av+GyMYr6GoF9xb5Rivo6g3/DROMV8rS9XD7CCW6Sv3cch5BkE/QGinc+WgyqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiqCJoqgqaKoKkiaKoImiqCpoqgqSJoqgiaKoKmiqCpImiq/ANcoyhPivDICQAAAABJRU5ErkJggg==">
+  <style>:root{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;font-size:16px;line-height:1.4;color:#18243d;background:#f7f9fd;-webkit-font-smoothing:antialiased}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:default}main{max-width:610px;margin:auto;padding:16px 18px calc(38px + env(safe-area-inset-bottom))}.topbar{display:flex;align-items:center;justify-content:space-between;margin:0 0 28px;padding-top:env(safe-area-inset-top)}.identity{display:flex;align-items:center;gap:10px;font-size:17px;font-weight:720;letter-spacing:-.02em}.brandmark{display:grid;place-items:center;background:#345edc;color:#fff;width:34px;height:34px;border-radius:11px;font-weight:700;font-size:24px;line-height:1}.iconbutton,.month-nav,.close{display:grid;place-items:center;border:1px solid #e3e9f2;color:#42516d;background:#fff;width:42px;height:42px;border-radius:14px;padding:0}.iconbutton svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-width:1.8}.today{background:#fff;border:1px solid #e6ebf4;box-shadow:0 8px 30px #192a6209;border-radius:25px;padding:25px 22px 21px}.dayline{display:flex;align-items:center;gap:8px;color:#586c92;font-size:14px;font-weight:570;text-transform:capitalize}.daydot{width:7px;height:7px;background:#3c6de3;border-radius:50%}h1{font-size:29px;letter-spacing:-.035em;line-height:1.15;margin:10px 0 28px;font-weight:700}.daily-dose{display:flex;align-items:end;justify-content:space-between;gap:8px;border-top:1px solid #edf0f5;padding:20px 0 8px}.dose-label{font-size:15px;color:#5c6c85;padding-bottom:11px}.daily-dose div{display:flex;align-items:baseline;gap:5px;white-space:nowrap}.daily-dose strong{font-size:52px;line-height:1;font-weight:720;letter-spacing:-.06em;font-variant-numeric:tabular-nums}.daily-dose div span{color:#5c6c85;font-size:18px;font-weight:560}.status{color:#67758b;font-size:14px;min-height:22px;margin:5px 0 17px}.primary{border:0;color:#fff;background:#345edc;font-weight:650;border-radius:15px;box-shadow:0 5px 14px #345edc27}.primary:active{background:#254ac5;transform:scale(.99)}#take{width:100%;min-height:56px;font-size:17px;padding:13px 15px}.actions{display:flex;align-items:stretch;gap:9px;margin-top:10px}.actions>*{min-width:0;flex:1}.actions button,.filebutton{min-height:44px;border:1px solid #e0e7f2;background:#f5f7fc;color:#3454a8;border-radius:13px;padding:9px 10px;text-align:center;font-size:14px;font-weight:600;display:grid;place-items:center}.textbutton{border:0;background:transparent;color:#345edc;font-weight:600;padding:7px 0;font-size:14px}#undo{display:block;margin:15px auto 0}#undo[hidden]{display:none}.progress-card{background:#eaf0ff;border-radius:22px;padding:22px;margin:16px 0 37px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px}h2{font-size:20px;line-height:1.2;letter-spacing:-.025em;font-weight:700;margin:0}.section-title>span{font-weight:700;color:#345edc;font-variant-numeric:tabular-nums}.progress-value{display:flex;align-items:baseline;gap:9px;margin:17px 0 16px}.progress-value strong{font-size:32px;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}.progress-value span{color:#657492;font-size:15px}progress{appearance:none;width:100%;height:7px;display:block;border:0;border-radius:8px;overflow:hidden}progress::-webkit-progress-bar{background:#cfdbfa;border-radius:8px}progress::-webkit-progress-value{background:#345edc;border-radius:8px}progress::-moz-progress-bar{background:#345edc;border-radius:8px}.remaining{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:16px;color:#5d6b88;font-size:14px}.remaining strong{color:#1d3d98;font-size:17px;font-variant-numeric:tabular-nums}.calendar-section,.history-section,.backup{margin-bottom:35px}.overline{margin:0 0 5px;color:#8290aa;text-transform:uppercase;letter-spacing:.08em;font-size:11px;font-weight:700}.calendar-shell{margin-top:17px;background:#fff;border:1px solid #e7ecf4;border-radius:22px;padding:14px 13px 17px;box-shadow:0 5px 22px #192a6207}.month-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.month-header h3{margin:0;font-size:17px;font-weight:670;text-transform:capitalize}.month-nav{width:36px;height:36px;border:0;background:#f3f6fc;color:#3856a0;font-size:26px;line-height:1}.week,#calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}.week{text-align:center;color:#8996ac;font-size:12px;font-weight:600;margin-bottom:5px}.week span{height:25px}#calendar .calendar-day{position:relative;display:grid;place-items:center;width:100%;min-height:42px;aspect-ratio:1;border:0;background:transparent;color:#263755;border-radius:12px;padding:0;font-size:15px;font-variant-numeric:tabular-nums}#calendar .calendar-day.outside{opacity:.25}#calendar .calendar-day.included{background:#f0f4fe;color:#5873b6}#calendar .calendar-day.taken{background:#345edc;color:#fff;font-weight:680}#calendar .calendar-day.skipped{background:#fff1f2;color:#bd5060;text-decoration:line-through}#calendar .calendar-day.current{outline:2px solid #315bd8;outline-offset:-2px}#calendar .calendar-day.taken.current{outline-color:#a3b9ff}.tick{position:absolute;bottom:2px;right:4px;font-size:10px;font-weight:700;text-decoration:none}.legend{display:flex;flex-wrap:wrap;gap:8px 13px;border-top:1px solid #eef1f7;margin-top:13px;padding-top:14px;color:#65738b;font-size:12px}.legend span{display:flex;align-items:center;gap:6px}.key{display:inline-block;width:10px;height:10px;border-radius:4px}.taken-key{background:#345edc}.skipped-key{background:#ffdfe3}.baseline-key{background:#f0f4fe;border:1px solid #d6e2fb}.calendar-note{color:#68768f;line-height:1.55;font-size:13px;margin:12px 3px 0}.history-section>.section-title{margin-bottom:13px}.history-row,.baseline{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid #e8edf5;padding:13px 1px}.history-row>div{display:grid;gap:3px}.history-row strong{font-weight:600;font-size:15px}.history-row span,.baseline,.empty{font-size:13px;color:#748199}.row-edit{border:0;background:transparent;color:#345edc;font-size:14px;font-weight:600;padding:10px 0}.empty{margin:12px 0}.baseline{border:0}.backup{border-top:1px solid #e2e8f2;padding-top:25px}.backup p,footer{font-size:14px;line-height:1.6;color:#66738b}.backup .actions{margin-top:17px}.filebutton{cursor:pointer}footer{padding-top:2px}footer p{margin:0}details{margin-top:16px}summary{color:#345edc;font-weight:600;cursor:pointer}details p{margin-top:8px}#notice{display:none;position:fixed;z-index:10;bottom:calc(16px + env(safe-area-inset-bottom));left:16px;right:16px;max-width:540px;margin:auto;padding:13px 17px;background:#17243f;color:#fff;font-size:14px;border-radius:13px;box-shadow:0 8px 25px #192a622e}#notice.visible{display:block}dialog{border:1px solid #e5eaf3;border-radius:22px;width:min(calc(100% - 26px),450px);max-height:87dvh;overflow:auto;padding:23px;background:#fff;color:#18243d;box-shadow:0 18px 50px #14213b30}dialog::backdrop{background:#15264a75}.dialog-head{display:flex;align-items:start;justify-content:space-between;margin-bottom:17px}.dialog-head h2{font-size:23px}.close{font-size:25px;width:34px;height:34px;border:0;background:#f3f6fb}dialog label{display:block;font-size:14px;font-weight:580;margin:14px 0;color:#506078}dialog input,dialog select{display:block;width:100%;min-height:47px;margin-top:7px;padding:10px 12px;border:1px solid #d4dce9;border-radius:11px;background:#fff;color:#18243d;font-size:16px}dialog input:disabled{background:#f5f7fa;color:#64718b}#doseField[hidden],#historicHint[hidden],#delete[hidden]{display:none}.hint{font-size:13px;line-height:1.5;color:#687790;margin:-2px 0 15px}.dialog-submit{width:100%;min-height:50px;margin-top:16px}.danger{display:block;margin:14px auto 0;background:none;border:0;color:#b43a51;font-size:14px;padding:8px}button:focus-visible,summary:focus-visible,.filebutton:focus-within{outline:3px solid #83a0f7;outline-offset:2px}@media(min-width:640px){main{padding:30px 30px 55px}.today{padding:28px}.calendar-shell{padding:20px}}
+
+.sync-status{display:flex;align-items:center;gap:8px;margin:-14px 2px 18px;color:#697b96;font-size:13px;font-weight:600}.sync-status::before{content:"";display:block;width:7px;height:7px;border-radius:50%;background:#c9a14e}.sync-status.saved::before{background:#3aa37a}.sync-status.pending::before{background:#db9b38}.sync-status.error::before{background:#b84d62}.sync-status.loading{color:#718096}#take:disabled,#skip:disabled,#editToday:disabled,#settingsOpen:disabled{opacity:.45;cursor:default}
+
+/* Soft blue glass surface for iPhone and desktop. */
+:root{color:#103351;background:#eaf7ff}
+body{min-height:100vh;background:radial-gradient(ellipse 85% 32% at 92% 1%,#9bddff80,transparent 76%),radial-gradient(ellipse 80% 32% at 0% 26%,#d3e6ff9c,transparent 75%),linear-gradient(160deg,#eefaff 0%,#eff7ff 48%,#e9f5ff 100%);background-attachment:fixed}
+main{max-width:640px;padding-top:calc(16px + env(safe-area-inset-top))}
+.topbar{margin-bottom:26px;padding-top:0}.identity{font-size:18px;letter-spacing:-.035em;color:#174262}.brandmark{background:linear-gradient(145deg,#42b9ed,#247acc);box-shadow:0 5px 16px #2b9bd050;border:1px solid #ffffff9e;border-radius:12px}
+.iconbutton,.month-nav,.close{background:#ffffffa8;border:1px solid #ffffffd4;color:#29658d;box-shadow:0 3px 14px #367aa217;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.today,.progress-card,.calendar-shell{border:1px solid #ffffffda;background:linear-gradient(150deg,#ffffffd9,#f4fbffb5);box-shadow:0 13px 38px #287ea51b,inset 0 1px #fff;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.today{position:relative;overflow:hidden;border-radius:30px;padding:25px 22px 21px}.today>*{position:relative;z-index:1}.today:before{content:"";position:absolute;width:230px;height:230px;right:-90px;top:-110px;background:radial-gradient(circle,#95ddff9c,transparent 70%);pointer-events:none}.dayline{color:#387a9e}.daydot{background:#39a9db;box-shadow:0 0 0 4px #a8e4ff75}h1{color:#143e5d;margin-bottom:26px}
+.daily-dose{border-color:#d6eaf4}.dose-label,.daily-dose div span{color:#5a829b}.daily-dose strong{color:#124d75}.status{color:#54778e;margin-bottom:14px}
+.primary{background:linear-gradient(135deg,#29aee0,#287dd0);box-shadow:0 7px 17px #278bc94a;border:1px solid #ffffff52}.primary:active{background:#247eb8}.full-dose{margin-top:11px}.full-dose:disabled{background:#ddedf6;color:#7494a8;border-color:#eef8fc;box-shadow:none;opacity:1!important}
+.split-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.dose-tile{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;min-width:0;min-height:118px;text-align:left;border:1px solid #bce4f4;border-radius:19px;padding:13px 14px;color:#17496c;background:linear-gradient(145deg,#f2fcff,#e1f6ffb8);box-shadow:inset 0 1px #fff,0 5px 14px #1b85b810;transition:transform .18s ease,background .18s ease}.dose-tile:not(:disabled):active{transform:scale(.97)}.dose-time{font-size:13px;font-weight:650;color:#4d83a0;display:flex;align-items:center;gap:6px}.dose-time span{font-size:15px;color:#2d9dcc}.dose-tile strong{font-size:28px;line-height:1.1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.dose-mark{font-size:12px;font-weight:700;color:#198cbe}.dose-tile.marked{border-color:#69bfde;background:linear-gradient(140deg,#d3f3ff,#b5e8f8);color:#135576}.dose-tile.marked .dose-mark{color:#126d91}.dose-tile:disabled:not(.marked){opacity:.55}
+.actions button,.filebutton{background:#ffffffa9;border-color:#cfe5f1;color:#216b97}.textbutton,.row-edit,summary{color:#1981b9}.today .actions{margin-top:10px}
+.today-note{margin-top:20px;padding-top:17px;border-top:1px solid #d7eaf4;display:grid;gap:8px}.today-note label{font-size:14px;color:#3b6b87;font-weight:650}.today-note textarea,dialog textarea{display:block;resize:vertical;width:100%;min-height:65px;border:1px solid #cbe4f1;background:#ffffffba;color:#183f5d;border-radius:13px;padding:10px 12px;font:inherit;font-size:15px;line-height:1.4;outline:none}.today-note textarea:focus,dialog textarea:focus{border-color:#39a8d9;box-shadow:0 0 0 3px #96ddf873}.today-note button,.note-only{justify-self:end;border:0;border-radius:11px;padding:8px 12px;color:#167eb0;background:#e1f5ff;font-size:13px;font-weight:700}.today-note button:disabled{opacity:.5}
+.progress-card{border-radius:26px;padding:23px 22px 21px;margin:17px 0 37px}.section-title>span,.remaining strong{color:#1979b6}.progress-value strong{color:#144969}.progress-value span,.remaining{color:#60849b}progress::-webkit-progress-bar{background:#c5e7f6}progress::-webkit-progress-value{background:linear-gradient(90deg,#69ccec,#238ec9)}progress::-moz-progress-bar{background:#2fa5d5}
+.time-forecast{display:flex;align-items:center;gap:16px;margin-top:18px;padding:14px 15px;border:1px solid #ffffffd4;border-radius:18px;background:#ffffff83}.time-forecast>div{display:flex;flex-direction:column;min-width:90px}.time-forecast strong{font-size:30px;line-height:1;color:#117eb3;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.time-forecast span{font-size:11px;color:#66889a;white-space:nowrap}.time-forecast p{margin:0;font-size:12px;line-height:1.45;color:#52778e}
+.stage-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:23px 0 11px}.stage-head h3{font-size:15px;margin:0;color:#2b5f7b}.stage-head span{font-size:11px;color:#7093a5}.stage-rail{position:relative;display:flex;justify-content:space-between;align-items:flex-start;isolation:isolate}.stage-rail:before,.stage-fill{content:"";position:absolute;z-index:-1;left:10px;right:10px;top:9px;height:5px;border-radius:10px;background:#c7e5f4}.stage-fill{right:auto;max-width:calc(100% - 20px);background:linear-gradient(90deg,#71d4ea,#2f9bd2);transition:width .4s ease}.stage-rail button{border:0;background:transparent;min-width:40px;padding:0;color:#7090a3;font-size:11px;font-weight:650;display:grid;justify-items:center;gap:6px}.stage-dot{height:23px;width:23px;background:#dceff8;border:2px solid #a7d5e9;border-radius:50%;box-shadow:0 0 0 3px #f2fbff}.stage-rail button.reached .stage-dot{background:#279dce;border-color:#168ac2}.stage-rail button.selected .stage-dot{box-shadow:0 0 0 4px #fff,0 0 0 7px #61bfe5}.stage-rail button.selected{color:#176f9f}.stage-detail{min-height:17px;margin:14px 0 0;font-size:12px;color:#3f7798}
+.calendar-shell{border-radius:25px}.month-nav{border:0;background:#e5f6fc}.calendar-note,.baseline,.empty{color:#64829a}#calendar .calendar-day{color:#214561}#calendar .calendar-day.included{background:#e2f2fa;color:#608bab}#calendar .calendar-day.taken{background:#258fc5;color:#fff}#calendar .calendar-day.taken.partial{background:#a7e2f6;color:#14577d}#calendar .calendar-day.skipped{background:#ffe9ea;color:#b45565}#calendar .calendar-day.current{outline-color:#1c87bd}#calendar .calendar-day.taken.current{outline-color:#115781}.partial-key{background:#a7e2f6}.taken-key{background:#258fc5}.baseline-key{background:#e2f2fa;border-color:#c7e4f0}.note-dot{position:absolute;bottom:3px;left:4px;width:4px;height:4px;background:#f8a748;border-radius:50%}.legend{border-color:#dcecf4;color:#668399}
+.history-row,.baseline{border-color:#d5e7f1}.history-row>div{min-width:0}.history-row span{color:#66869a}.note-preview{color:#577b90;font-size:12px;line-height:1.4;white-space:pre-line;margin:1px 0 0;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.backup{border-color:#cfe4ef}.backup p,footer{color:#64829a}.sync-status{color:#4d7895}.sync-status.saved::before{background:#31a595}
+dialog{background:#f5fbff;border-color:#ffffff;box-shadow:0 22px 60px #18496450}dialog label{color:#3d6882}dialog input,dialog select{border-color:#c4dfea;color:#153c5a;background:#fff}dialog textarea{margin-top:7px}.hint{color:#65889a}
+button:focus-visible,textarea:focus-visible,summary:focus-visible,.filebutton:focus-within{outline:3px solid #35acd8;outline-offset:2px}@media(min-width:640px){main{padding-top:30px}}
+@media(prefers-reduced-motion:reduce){.dose-tile,.stage-fill{transition:none}}
+.stage-rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.stage-rail button{width:100%;justify-items:end}.stage-rail:before,.stage-fill{left:0;right:10px}.stage-fill{right:auto;max-width:calc(100% - 10px)}</style>
+</head>
+<body>
+  <main>
+    <header class="topbar">
+      <div class="identity"><span class="brandmark" aria-hidden="true">м</span><span>Мій курс</span></div>
+      <button id="settingsOpen" class="iconbutton" type="button" aria-label="Налаштування" title="Налаштування">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M9 4v6M15 14v6"/></svg>
+      </button>
+    </header>
+
+    <div id="syncStatus" class="sync-status saved" role="status" aria-live="polite">Збережено на пристрої</div>
+    <section class="today" aria-labelledby="todayTitle">
+      <div class="dayline"><span class="daydot" aria-hidden="true"></span><span id="day"></span></div>
+      <h1 id="todayTitle"></h1>
+      <div class="daily-dose"><span class="dose-label">Денна доза</span><div><strong id="dose"></strong><span>мг</span></div></div>
+      <p id="status" class="status" aria-live="polite"></p>
+      <div class="split-grid" role="group" aria-label="Позначити прийом">
+        <button id="takeDay" class="dose-tile" type="button"><span class="dose-time"><span aria-hidden="true">☀</span> День</span><strong id="dayDoseLabel">10 мг</strong><span id="dayMarked" class="dose-mark">Позначити</span></button>
+        <button id="takeEvening" class="dose-tile" type="button"><span class="dose-time"><span aria-hidden="true">☾</span> Вечір</span><strong id="eveningDoseLabel">20 мг</strong><span id="eveningMarked" class="dose-mark">Позначити</span></button>
+      </div>
+      <button id="take" class="primary full-dose" type="button">Прийняла 30 мг одразу</button>
+      <div class="actions"><button id="skip" type="button">Пропустила день</button><button id="editToday" type="button">Змінити запис</button></div>
+      <div class="today-note"><label for="todayNote">Нотатка на сьогодні</label><textarea id="todayNote" maxlength="2000" rows="2" placeholder="Як почуваюся, що варто памʼятати…"></textarea><button id="saveNote" type="button">Зберегти нотатку</button></div>
+      <button id="undo" class="textbutton" type="button" hidden>Скасувати останню зміну</button>
+    </section>
+
+    <section class="progress-card" aria-label="Прогрес курсу">
+      <div class="section-title"><h2>Накопичена доза</h2><span id="percent"></span></div>
+      <div class="progress-value"><strong id="total"></strong><span id="target"></span></div>
+      <progress id="bar" max="100" aria-label="Прогрес накопиченої дози"></progress>
+      <div class="remaining"><span>До вказаної мети</span><strong id="left"></strong></div>
+      <div class="time-forecast"><div><strong id="daysLeft"></strong><span>днів орієнтовно</span></div><p id="forecastCaption"></p></div>
+      <div class="stage-head"><h3>Етапи курсу</h3><span>Натисни на позначку</span></div>
+      <div id="stageRail" class="stage-rail" role="group" aria-label="Етапи накопиченої дози"><div id="stageFill" class="stage-fill"></div><button type="button" data-stage="25" aria-pressed="false"><span class="stage-dot"></span><span>25%</span></button><button type="button" data-stage="50" aria-pressed="false"><span class="stage-dot"></span><span>50%</span></button><button type="button" data-stage="75" aria-pressed="false"><span class="stage-dot"></span><span>75%</span></button><button type="button" data-stage="100" aria-pressed="false"><span class="stage-dot"></span><span>100%</span></button></div>
+      <p id="stageDetail" class="stage-detail" role="status"></p>
+    </section>
+
+    <section class="calendar-section" aria-labelledby="calendarTitle">
+      <div class="section-title calendar-heading"><div><p class="overline">Твій шлях</p><h2 id="calendarTitle">Календар</h2></div><button id="todayMonth" class="textbutton" type="button">Сьогодні</button></div>
+      <div class="calendar-shell">
+        <div class="month-header"><button id="prev" class="month-nav" type="button" aria-label="Попередній місяць">‹</button><h3 id="month"></h3><button id="next" class="month-nav" type="button" aria-label="Наступний місяць">›</button></div>
+        <div class="week" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span></div>
+        <div id="calendar"></div>
+        <div class="legend"><span><i class="key taken-key"></i>Прийняла</span><span><i class="key partial-key"></i>Частина дози</span><span><i class="key skipped-key"></i>Пропуск</span><span><i class="key baseline-key"></i>У початковій сумі</span></div>
+      </div>
+      <p class="calendar-note">Початкова сума до 5 жовтня вноситься окремо в налаштуваннях. Позначки попередніх днів у календарі не додадуть дозу вдруге.</p>
+    </section>
+
+    <section class="history-section" aria-labelledby="historyTitle"><div class="section-title"><h2 id="historyTitle">Історія</h2></div><div id="history"></div><div class="baseline" id="baseline"></div></section>
+
+    <section class="backup" aria-labelledby="backupTitle"><h2 id="backupTitle">Резервна копія</h2><p>Записи зберігаються лише в памʼяті цього пристрою. Час від часу зберігай резервну копію у «Файли», щоб дані точно не загубилися.</p><div class="actions"><button id="export" type="button">Зберегти копію</button><label class="filebutton">Відновити<input id="import" type="file" accept="application/json,.json" hidden></label></div></section>
+
+    <footer><p>Це щоденник призначеної тобі схеми. Він лише рахує введені дози.</p><details><summary>Як додати на екран iPhone</summary><p>Відкрий сторінку в Safari → натисни «Поділитися» → «На екран Домівки» → «Додати». Надалі відкривай щоденник із цієї іконки.</p></details></footer>
+    <p id="notice" role="status"></p>
+  </main>
+
+  <dialog id="edit" aria-labelledby="editTitle"><form id="editForm"><div class="dialog-head"><div><p class="overline">Календар курсу</p><h2 id="editTitle">Позначка дня</h2></div><button class="close" type="button" data-close aria-label="Закрити">×</button></div><label>Дата<input id="recordDate" type="date" disabled></label><label>Статус<select id="recordStatus"><option value="taken">Прийняла</option><option value="skipped">Пропустила</option></select></label><label id="doseField">Прийнято, мг<input id="recordDose" type="number" min="0.1" step="0.1" inputmode="decimal" required></label><label>Нотатка<textarea id="recordNote" maxlength="2000" rows="3" placeholder="Необовʼязково"></textarea></label><button id="saveRecordNote" class="note-only" type="button">Зберегти лише нотатку</button><p id="historicHint" class="hint" hidden>Цей день уже входить до початкової суми. Позначка змінить календар, але не загальну суму.</p><button class="primary dialog-submit" type="submit">Зберегти позначку</button><button id="delete" class="danger" type="button">Видалити позначку</button></form></dialog>
+  <dialog id="settings" aria-labelledby="settingsTitle"><form id="settingsForm"><div class="dialog-head"><div><p class="overline">Твоя схема</p><h2 id="settingsTitle">Налаштування</h2></div><button class="close" type="button" data-close aria-label="Закрити">×</button></div><label>Денний прийом, мг<input name="dayDose" type="number" min="0" step="0.1" inputmode="decimal" required></label><label>Вечірній прийом, мг<input name="eveningDose" type="number" min="0" step="0.1" inputmode="decimal" required></label><p class="hint">Разом: <output id="settingsSum">30</output> мг на день. Зміни схему лише за своїм призначенням.</p><label>Уже прийнято до 5 жовтня, мг<input name="baseline" type="number" min="0" step="0.1" inputmode="decimal" required></label><p class="hint">Зміна цієї суми змінить загальний результат.</p><label>Цільова сума, мг<input name="target" type="number" min="0.1" step="0.1" inputmode="decimal" required></label><label>Початок курсу<input name="start" type="date" required></label><p class="hint">Дні курсу рахуються від вибраної дати.</p><button class="primary dialog-submit" type="submit">Зберегти зміни</button></form></dialog>
+  <script>const $ = id => document.getElementById(id);
+const KEY = 'my-course-v1', ANCHOR = '2026-10-05', LOCALE = 'uk-UA';
+const dateKey = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+const dayNumber = date => Math.round(Date.parse(`${date}T12:00:00Z`) / 86400000);
+const format = n => new Intl.NumberFormat(LOCALE, { maximumFractionDigits: 1 }).format(n);
+const round = n => Math.round(n * 10) / 10;
+const validDate = date => /^\d{4}-\d{2}-\d{2}$/.test(date) && !Number.isNaN(Date.parse(`${date}T12:00:00Z`)) && new Date(`${date}T12:00:00Z`).toISOString().slice(0, 10) === date;
+const validParts = entry => {
+  if (entry.parts === undefined) return true;
+  if (!entry.parts || typeof entry.parts !== 'object' || Array.isArray(entry.parts)) return false;
+  const parts = Object.entries(entry.parts);
+  if (entry.status === 'skipped') return parts.length === 0;
+  return parts.length > 0 && parts.length <= 2 &&
+    parts.every(([key, amount]) => ['day', 'evening', 'full', 'manual'].includes(key) && Number.isFinite(amount) && amount > 0) &&
+    !(parts.length > 1 && parts.some(([key]) => key === 'full' || key === 'manual')) &&
+    Math.abs(parts.reduce((sum, [, amount]) => sum + amount, 0) - entry.dose) < 0.051;
+};
+const validMarks = (marks, historical) => marks && typeof marks === 'object' && !Array.isArray(marks) && Object.entries(marks).every(([date, entry]) => validDate(date) && (historical ? date < ANCHOR : date >= ANCHOR) && entry && ['taken', 'skipped'].includes(entry.status) && Number.isFinite(entry.dose) && (entry.status === 'taken' ? entry.dose > 0 : entry.dose === 0) && (historical || validParts(entry)));
+const validNotes = (notes, start) => notes && typeof notes === 'object' && !Array.isArray(notes) && Object.entries(notes).every(([date, note]) => validDate(date) && date >= start && typeof note === 'string' && note.length <= 2000);
+const valid = state => state && state.version === 1 && Number.isFinite(state.dose) && state.dose > 0 && Number.isFinite(state.dayDose) && state.dayDose >= 0 && Number.isFinite(state.eveningDose) && state.eveningDose >= 0 && Math.abs(state.dayDose + state.eveningDose - state.dose) < 0.051 && Number.isFinite(state.baseline) && state.baseline >= 0 && Number.isFinite(state.target) && state.target > 0 && validDate(state.start) && state.start <= ANCHOR && validMarks(state.records, false) && validMarks(state.historicalRecords, true) && Object.keys(state.historicalRecords).every(date => date >= state.start) && validNotes(state.notes, state.start);
+
+const initial = {"version": 1, "dose": 30, "dayDose": 10, "eveningDose": 20, "baseline": 0, "target": 5000, "start": "2026-10-05", "anchorDay": 105, "records": {}, "historicalRecords": {}, "notes": {}};
+let state = initial, undo = null, ready = false;
+let selectedStage = null, noteDraftDirty = false;
+
+function notice(message) {
+  $('notice').textContent = message;
+  $('notice').classList.add('visible');
+  clearTimeout(notice.timer);
+  notice.timer = setTimeout(() => $('notice').classList.remove('visible'), 4500);
+}
+function normalize(source) {
+  if (!source || source.version !== 1) throw new Error('Невірний формат');
+  const dayDose = source.dayDose ?? (source.dose === 30 ? 10 : source.dose);
+  const eveningDose = source.eveningDose ?? (source.dose === 30 ? 20 : 0);
+  const records = Object.fromEntries(Object.entries(source.records || {}).map(([date, entry]) => [date, entry.status === 'taken' ? { ...entry, parts: entry.parts || { manual: entry.dose } } : { ...entry, parts: {} }]));
+  const converted = { ...source, dayDose, eveningDose, records, historicalRecords: source.historicalRecords || {}, notes: source.notes || {} };
+  if (converted.start === '2026-06-27') converted.start = '2026-06-23';
+  if (!valid(converted)) throw new Error('Невірний формат');
+  return converted;
+}
+function readLocal() {
+  try { const saved = localStorage.getItem(KEY); return saved ? normalize(JSON.parse(saved)) : null; }
+  catch { notice('Не вдалося прочитати місцеві записи. Віднови резервну копію.'); return null; }
+}
+function syncStatus(kind, message) {
+  const label = $('syncStatus'); label.className = `sync-status ${kind}`; label.textContent = message;
+}
+function enableControls(value) {
+  for (const id of ['take', 'takeDay', 'takeEvening', 'saveNote', 'skip', 'editToday', 'settingsOpen', 'prev', 'next', 'todayMonth', 'import']) $(id).disabled = !value;
+  document.querySelectorAll('[data-stage]').forEach(button => button.disabled = !value);
+}
+function save(next) {
+  if (!ready || !valid(next)) return notice('Перевір введені значення.'), false;
+  try {
+    localStorage.setItem(KEY, JSON.stringify(next));
+    undo = structuredClone(state); state = next;
+    render(); syncStatus('saved', 'Збережено на пристрої');
+    return true;
+  } catch { notice('Не вдалося зберегти на телефоні. Перевір вільне місце.'); return false; }
+}
+function boot() {
+  const local = readLocal();
+  state = local || normalize(initial);
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {}
+  ready = true; enableControls(true); render();
+  syncStatus('saved', 'Збережено на пристрої');
+}
+const month = new Date();
+month.setDate(1);
+function render() {
+  const today = dateKey();
+  const current = state.records[today];
+  const parts = current?.parts || {};
+  const total = round(state.baseline + Object.values(state.records).reduce((sum, item) => sum + item.dose, 0));
+  const percent = round(100 * total / state.target);
+  const remaining = round(Math.max(0, state.target - total));
+  const daysLeft = Math.ceil(remaining / state.dose);
+  $('day').textContent = `${new Date().toLocaleDateString(LOCALE, { weekday: 'long' })} · ${dayNumber(today) - dayNumber(state.start) + 1}-й день курсу`;
+  $('todayTitle').textContent = new Date().toLocaleDateString(LOCALE, { day: 'numeric', month: 'long' });
+  $('dose').textContent = format(state.dose);
+  $('dayDoseLabel').textContent = `${format(state.dayDose)} мг`;
+  $('eveningDoseLabel').textContent = `${format(state.eveningDose)} мг`;
+  $('dayMarked').textContent = parts.day ? '✓ Прийняла' : `Прийняла ${format(state.dayDose)} мг`;
+  $('eveningMarked').textContent = parts.evening ? '✓ Прийняла' : `Прийняла ${format(state.eveningDose)} мг`;
+  const splitAllowed = !current || (current.status === 'taken' && !parts.full && !parts.manual);
+  $('takeDay').disabled = !ready || !splitAllowed || !!parts.day || state.dayDose <= 0 || round((current?.dose || 0) + state.dayDose) > state.dose;
+  $('takeEvening').disabled = !ready || !splitAllowed || !!parts.evening || state.eveningDose <= 0 || round((current?.dose || 0) + state.eveningDose) > state.dose;
+  $('takeDay').classList.toggle('marked', !!parts.day);
+  $('takeEvening').classList.toggle('marked', !!parts.evening);
+  $('take').textContent = `Прийняла ${format(state.dose)} мг одразу`;
+  $('take').disabled = !ready || !!current;
+  $('status').textContent = current ? (current.status === 'taken' ? `Сьогодні записано ${format(current.dose)} із ${format(state.dose)} мг${parts.full ? ' · одним прийомом' : ''}` : 'Сьогодні позначено пропуск') : 'Сьогодні ще немає позначки';
+  if (!noteDraftDirty) $('todayNote').value = state.notes[today] || '';
+  $('saveNote').disabled = !ready;
+  $('total').textContent = `${format(total)} мг`;
+  $('target').textContent = `із ${format(state.target)} мг`;
+  $('percent').textContent = `${format(percent)}%`;
+  $('bar').value = Math.min(percent, 100);
+  $('left').textContent = remaining === 0 ? 'Вказаної мети досягнуто' : `${format(remaining)} мг`;
+  $('daysLeft').textContent = format(daysLeft);
+  $('forecastCaption').textContent = remaining === 0 ? 'Цільову суму вже набрано.' : `Якщо щодня приймати ${format(state.dose)} мг. Це арифметичний орієнтир, не дата завершення лікування.`;
+  $('stageFill').style.width = `${Math.min(100, Math.max(0, percent))}%`;
+  if (selectedStage === null) selectedStage = [25, 50, 75, 100].find(stage => percent < stage) || 100;
+  for (const button of document.querySelectorAll('[data-stage]')) {
+    const stage = Number(button.dataset.stage);
+    button.classList.toggle('reached', percent >= stage);
+    button.classList.toggle('selected', selectedStage === stage);
+    button.setAttribute('aria-pressed', String(selectedStage === stage));
+  }
+  const stageAmount = round(state.target * selectedStage / 100);
+  $('stageDetail').textContent = percent >= selectedStage ? `${selectedStage}% · цей етап уже пройдено` : `${selectedStage}% · ще ${format(round(stageAmount - total))} мг до цього етапу`;
+  $('baseline').textContent = `До 5 жовтня · ${format(state.baseline)} мг уже враховано`;
+  $('undo').hidden = !undo;
+  renderCalendar(today);
+  renderHistory();
+}
+function renderCalendar(today) {
+  $('month').textContent = month.toLocaleDateString(LOCALE, { month: 'long', year: 'numeric' });
+  const calendar = $('calendar');
+  calendar.replaceChildren();
+  const year = month.getFullYear(), number = month.getMonth();
+  const offset = (new Date(year, number, 1).getDay() + 6) % 7;
+  const count = new Date(year, number + 1, 0).getDate();
+  for (let i = 0; i < offset; i++) calendar.append(document.createElement('span'));
+  for (let i = 1; i <= count; i++) {
+    const date = dateKey(new Date(year, number, i));
+    const historical = date < ANCHOR;
+    const mark = historical ? state.historicalRecords[date] : state.records[date];
+    const button = document.createElement('button');
+    button.type = 'button';
+    const partial = !historical && mark?.status === 'taken' && mark.dose < state.dose && (mark.parts?.day || mark.parts?.evening);
+    button.className = ['calendar-day', mark?.status || (historical && date >= state.start && date <= today ? 'included' : ''), partial ? 'partial' : '', date === today ? 'current' : '', date < state.start || date > today ? 'outside' : ''].filter(Boolean).join(' ');
+    const numeral = document.createElement('span');
+    numeral.textContent = i;
+    button.append(numeral);
+    if (mark?.status === 'taken') {
+      const tick = document.createElement('span');
+      tick.className = 'tick';
+      tick.textContent = '✓';
+      button.append(tick);
+    }
+    if (state.notes[date]) { const dot = document.createElement('span'); dot.className = 'note-dot'; dot.setAttribute('aria-hidden', 'true'); button.append(dot); }
+    const description = mark ? (mark.status === 'taken' ? `прийняла ${format(mark.dose)} мг${partial ? ', частина дози' : ''}` : 'пропуск') : (historical && date >= state.start ? 'враховано у початковій сумі, день не уточнено' : 'немає позначки');
+    button.setAttribute('aria-label', `${new Date(`${date}T12:00:00`).toLocaleDateString(LOCALE, { day: 'numeric', month: 'long' })}, ${description}${state.notes[date] ? ', є нотатка' : ''}`);
+    button.disabled = date < state.start || date > today;
+    button.onclick = () => openEdit(date);
+    calendar.append(button);
+  }
+}
+function renderHistory() {
+  const history = $('history');
+  history.replaceChildren();
+  const dates = [...new Set([...Object.keys(state.records), ...Object.keys(state.historicalRecords), ...Object.keys(state.notes)])].sort((a, b) => b.localeCompare(a));
+  if (!dates.length) { const empty = document.createElement('p'); empty.className = 'empty'; empty.textContent = 'Після першої позначки чи нотатки записи зʼявляться тут.'; history.append(empty); }
+  for (const date of dates) {
+    const historical = date < ANCHOR, mark = historical ? state.historicalRecords[date] : state.records[date];
+    const row = document.createElement('div'); row.className = 'history-row';
+    const information = document.createElement('div');
+    const label = document.createElement('strong'); label.textContent = new Date(`${date}T12:00:00`).toLocaleDateString(LOCALE, { day: 'numeric', month: 'long' });
+    const detail = document.createElement('span'); detail.textContent = `${mark ? mark.status === 'taken' ? `${format(mark.dose)} мг · прийняла` : 'Пропуск' : 'Лише нотатка'}${historical && mark ? ' · вже враховано' : ''}`;
+    information.append(label, detail);
+    if (state.notes[date]) { const note = document.createElement('p'); note.className = 'note-preview'; note.textContent = state.notes[date]; information.append(note); }
+    const edit = document.createElement('button'); edit.className = 'row-edit'; edit.type = 'button'; edit.textContent = 'Змінити'; edit.setAttribute('aria-label', `Змінити позначку за ${date}`); edit.onclick = () => openEdit(date);
+    row.append(information, edit); history.append(row);
+  }
+}
+function toggleDose() {
+  const skipped = $('recordStatus').value === 'skipped';
+  $('recordDose').disabled = skipped;
+  $('doseField').hidden = skipped;
+}
+function openEdit(date = dateKey(), status) {
+  if (date < state.start || date > dateKey()) return notice('Можна позначати лише минулі дні курсу та сьогодні.');
+  const historical = date < ANCHOR;
+  const mark = historical ? state.historicalRecords[date] : state.records[date];
+  $('recordDate').value = date;
+  $('recordStatus').value = status || mark?.status || 'taken';
+  $('recordDose').value = mark?.dose || (historical ? 20 : state.dose);
+  $('recordNote').value = state.notes[date] || '';
+  $('historicHint').hidden = !historical;
+  $('delete').hidden = !mark;
+  toggleDose();
+  $('edit').showModal();
+}
+$('recordStatus').onchange = toggleDose;
+function markPart(part) {
+  const date = dateKey(), amount = part === 'day' ? state.dayDose : state.eveningDose;
+  const current = state.records[date], parts = current?.parts || {};
+  if (!ready || amount <= 0 || (current && (current.status !== 'taken' || parts.full || parts.manual)) || parts[part] || round((current?.dose || 0) + amount) > state.dose) return;
+  save({ ...state, records: { ...state.records, [date]: { status: 'taken', dose: round((current?.dose || 0) + amount), parts: { ...parts, [part]: amount } } } });
+}
+$('takeDay').onclick = () => markPart('day');
+$('takeEvening').onclick = () => markPart('evening');
+$('take').onclick = () => { const date = dateKey(); if (state.records[date]) return; save({ ...state, records: { ...state.records, [date]: { status: 'taken', dose: state.dose, parts: { full: state.dose } } } }); };
+$('skip').onclick = () => { const date = dateKey(); if (state.records[date]) return openEdit(date, 'skipped'); save({ ...state, records: { ...state.records, [date]: { status: 'skipped', dose: 0, parts: {} } } }); };
+$('editToday').onclick = () => openEdit();
+function withNote(date, value) {
+  const notes = { ...state.notes };
+  if (value) notes[date] = value; else delete notes[date];
+  return notes;
+}
+$('todayNote').oninput = () => { noteDraftDirty = true; };
+$('saveNote').onclick = () => {
+  const date = dateKey(), value = $('todayNote').value;
+  if (value.length > 2000) return notice('Нотатка надто довга.');
+  if ((state.notes[date] || '') === value) return notice('Нотатка вже збережена.');
+  noteDraftDirty = false;
+  if (save({ ...state, notes: withNote(date, value) })) notice('Нотатку збережено.');
+};
+$('saveRecordNote').onclick = () => {
+  const date = $('recordDate').value, value = $('recordNote').value;
+  if (!validDate(date) || date < state.start || date > dateKey() || value.length > 2000) return notice('Перевір нотатку та дату.');
+  if (date === dateKey()) noteDraftDirty = false;
+  if (save({ ...state, notes: withNote(date, value) })) { $('edit').close(); notice('Нотатку збережено.'); }
+};
+$('editForm').onsubmit = event => {
+  event.preventDefault();
+  const date = $('recordDate').value, status = $('recordStatus').value;
+  const dose = status === 'skipped' ? 0 : Number($('recordDose').value);
+  const note = $('recordNote').value;
+  if (!validDate(date) || date < state.start || date > dateKey() || !Number.isFinite(dose) || (status === 'taken' && dose <= 0) || note.length > 2000) return notice('Перевір дату, дозу та нотатку.');
+  const key = date < ANCHOR ? 'historicalRecords' : 'records';
+  const entry = key === 'records' ? { status, dose, parts: status === 'taken' ? { manual: dose } : {} } : { status, dose };
+  if (date === dateKey()) noteDraftDirty = false;
+  if (save({ ...state, [key]: { ...state[key], [date]: entry }, notes: withNote(date, note) })) $('edit').close();
+};
+$('delete').onclick = () => {
+  const date = $('recordDate').value, key = date < ANCHOR ? 'historicalRecords' : 'records';
+  if (!state[key][date] || !confirm('Видалити цю позначку?')) return;
+  const marks = { ...state[key] }; delete marks[date];
+  if (save({ ...state, [key]: marks })) $('edit').close();
+};
+$('undo').onclick = () => { if (!undo) return; const previous = undo; if (save(previous)) { undo = null; render(); notice('Останню зміну скасовано.'); } };
+$('prev').onclick = () => { month.setMonth(month.getMonth() - 1); render(); };
+$('next').onclick = () => { month.setMonth(month.getMonth() + 1); render(); };
+$('todayMonth').onclick = () => { month.setFullYear(new Date().getFullYear(), new Date().getMonth(), 1); render(); };
+document.querySelectorAll('[data-stage]').forEach(button => button.onclick = () => { selectedStage = Number(button.dataset.stage); render(); });
+function settingsTotal() {
+  const form = $('settingsForm').elements;
+  $('settingsSum').textContent = format(round((Number(form.dayDose.value) || 0) + (Number(form.eveningDose.value) || 0)));
+}
+$('settingsOpen').onclick = () => { for (const key of ['dayDose', 'eveningDose', 'baseline', 'target', 'start']) $('settingsForm').elements[key].value = state[key]; settingsTotal(); $('settings').showModal(); };
+$('settingsForm').elements.dayDose.oninput = settingsTotal;
+$('settingsForm').elements.eveningDose.oninput = settingsTotal;
+$('settingsForm').onsubmit = event => {
+  event.preventDefault();
+  const form = $('settingsForm').elements;
+  const dayDose = Number(form.dayDose.value), eveningDose = Number(form.eveningDose.value);
+  const next = { ...state, dayDose, eveningDose, dose: round(dayDose + eveningDose), baseline: Number(form.baseline.value), target: Number(form.target.value), start: form.start.value };
+  if (!valid(next)) return notice('Перевір значення. Початок курсу не може бути пізніше позначених днів.');
+  if (save(next)) $('settings').close();
+};
+document.querySelectorAll('[data-close]').forEach(button => button.onclick = () => button.closest('dialog').close());
+function download(value, name = `mii-kurs-${dateKey()}.json`) {
+  const link = document.createElement('a'), url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' }));
+  link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+$('export').onclick = () => download(state);
+$('import').onchange = async event => {
+  try {
+    const file = event.target.files[0]; if (!file) return;
+    if (file.size > 2000000) throw new Error('Завеликий файл');
+    const imported = normalize(JSON.parse(await file.text()));
+    if (confirm('Замінити поточні записи цією резервною копією?') && save(imported)) notice('Копію завантажено та збережено на пристрої.');
+  } catch { notice('Не вдалося відновити: файл не відповідає формату щоденника.'); }
+  event.target.value = '';
+};
+boot();
+</script>
+</body>
+</html>
